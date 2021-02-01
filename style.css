@@ -1,0 +1,84 @@
+/* Variáveis - ########  */
+:root {
+    --dark-blue: #323f5f;
+}
+
+/* Global - ########  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background: #F0F2F5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* Titles - ########  */
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+
+/* Header - ########  */
+header {
+    background-color: #2d4a22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: #ffffff;
+    font-weight: 100;
+}
+
+/* Balance - ########  */
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+/* Card - ########  */
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem 2rem ;
+    border-radius: .25rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card.total {
+    background-color: #49aa26;
+    color: #fff;
+}
+
+/* Footer - ########  */
+
+footer {
+    text-align: center;
+}
