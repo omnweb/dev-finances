@@ -77,8 +77,66 @@ p {
     color: #fff;
 }
 
+/* Transaction - ########  */
+
+#transaction {
+    overflow: auto;
+}
+
+
+/* Table - ########  */
+
+
+#data-table {
+    width: 100%;
+    min-width: 500px;
+    border-spacing: 0 .5rem;
+    color: #969cb3;
+}
+
+table thead tr th:first-child, 
+table tbody tr td:first-child{
+    border-radius: .25rem 0 0 .25rem;
+}
+table tbody tr {
+    opacity: .8;
+}
+table tbody tr:hover {
+    background-color: #ffffff;
+    opacity: 1;
+}
+table th {
+    background-color: #ffffff;
+    font-weight: normal;
+    color: var(--dark-blue);
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table td {
+    background-color: #ffffff;    
+    padding: 1rem 2rem;
+    /* color: var(--dark-blue) */
+}
+
+td.description {
+    color: var(--dark-blue)
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+
 /* Footer - ########  */
 
 footer {
+    padding: 4rem 0 2rem;
     text-align: center;
+    color: var(--dark-blue);
+    opacity: .6;
 }
