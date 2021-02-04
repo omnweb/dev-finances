@@ -1,6 +1,11 @@
 /* Variáveis - ########  */
 :root {
     --dark-blue: #323f5f;
+    --green: #49aa26;
+    --light-green: #3dd702;
+    --br-default: .25rem;
+    --white: #ffffff;
+    --red: #e92929;
 }
 
 /* Global - ########  */
@@ -49,17 +54,47 @@ h2 {
 /* Links ans Buttons - ########  */
 
 a {
-    color: #49aa26;
+    color: var(--green);
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
-    color: #3dd702;
+    color: var(--light-green);
 }
-
+button { 
+    margin-top: 1rem;
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: var(--white);
+    background-color: var(--green);
+    padding: 0;
+    border-radius: var(--br-default);
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--light-green);
+}
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
+}
+
+.button.cancel {
+    margin-top: 1rem;
+    border: 2px solid var(--red);
+    color:var(--red);
+    height: 50px;
+    border-radius: var(--br-default);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .6;
+}
+.button.cancel:hover {
+    opacity: 1;
 }
 
 
@@ -71,7 +106,7 @@ header {
 }
 
 #logo {
-    color: #ffffff;
+    color: var(--white);
     font-weight: 100;
 }
 
@@ -82,15 +117,15 @@ header {
 
 #balance h2 {
     margin-top: 0;
-    color: #fff;
+    color: var(--white);
 }
 
 /* Card - ########  */
 
 .card {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 1.5rem 2rem ;
-    border-radius: .25rem;
+    border-radius: var(--br-default);
     color: var(--dark-blue);
     margin-bottom: 2rem;
 }
@@ -112,8 +147,8 @@ p {
 }
 
 .card.total {
-    background-color: #49aa26;
-    color: #fff;
+    background-color: var(--green);
+    color: var(--white);
 }
 
 /* Transaction - ########  */
@@ -146,11 +181,11 @@ table tbody tr {
     opacity: .8;
 }
 table tbody tr:hover {
-    background-color: #ffffff;
+    background-color: var(--white);
     opacity: 1;
 }
 table th {
-    background-color: #ffffff;
+    background-color: var(--white);
     font-weight: normal;
     color: var(--dark-blue);
     padding: 1rem 2rem;
@@ -158,7 +193,7 @@ table th {
 }
 
 table td {
-    background-color: #ffffff;    
+    background-color: var(--white);    
     padding: 1rem 2rem;
     /* color: var(--dark-blue) */
 }
@@ -168,12 +203,87 @@ td.description {
 }
 
 td.income {
-    color: #12a454;
+    color: var(--green);
 }
 
 td.expense {
-    color: #e92929;
+    color:var(--red);
 }
+
+
+/* Modal - ########  */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0; 
+    visibility: hidden; 
+    transition-duration: .3s;
+
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: .6s;
+}
+
+.modal {
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Form -  */
+
+#form {
+   max-width: 500px;
+}
+#form h2{
+    margin-top: 0;
+}
+
+fieldset {
+    flex-direction: column;
+    display: flex;
+    padding: 1rem;
+    color: var(--dark-blue);  
+    border: 1px solid rgba(0,0,0, 0.2)  
+}
+
+fieldset >input {
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-radius: var(--br-default);
+    margin-top: 1rem;
+}
+
+fieldset > small {
+    margin-top: .25rem;
+    opacity: .6;    
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions button,
+.input-group.actions .button {
+    width: 48%;
+}
+
 
 
 /* Footer - ########  */
