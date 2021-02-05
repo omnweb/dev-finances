@@ -114,6 +114,16 @@ header {
 #balance {
     margin-top: -8rem;
 }
+.success {
+    background-color: var(--green);
+}
+.error {
+    background-color: var(--red);
+}
+.alert {
+    background-color: #c57241;
+}
+
 
 #balance h2 {
     margin-top: 0;
