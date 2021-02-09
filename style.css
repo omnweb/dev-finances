@@ -124,6 +124,14 @@ header {
     background-color: #c57241;
 }
 
+.form-error {
+    background-color: var(--red);
+    opacity: .7;
+    color: var(--white);
+    border-radius: var(--br-default);
+    padding: .25rem;
+}
+
 
 #balance h2 {
     margin-top: 0;

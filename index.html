@@ -62,24 +62,25 @@
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" onSubmit="Form.submit(event)">
                     <div class="input-group">
                         <fieldset>
-                            <legend>Entrada / Saída</legend>
-                            <label class="sr-only"> for="description">Descrição</label>
+                            <legend class="legend"></legend>
+                            <label class="sr-only"> for="description">Descrição*</label>
                             <input type="text" id="description" name="description" placeholder="Descreva a transação" />
                             <label class="sr-only" for="amount">Valor</label>
                             <input type="number" step=".01" id="amount" name="amount" placeholder="Insira o valor" />
                             <small class="help">Use negativo ( - ) para despesas e vírgula ( , ) para casas
                                 decimais</small>
                             <label class="sr-only"> for="data">Data</label>
-                            <input type="date" id="data" name="data" placeholder="01/01/2021" />
+                            <input type="date" id="date" name="date" placeholder="01/01/2021" />
                         </fieldset>
                     </div>
                     <div class="input-group actions">
                         <a onclick="Modal.close()" class="button cancel">Cancelar</a>
                         <button type="submit"> Salvar</button>
                     </div>
+                    <!-- <spam class="form-error"></spam> -->
                 </form>
             </div>
         </div>
