@@ -34,7 +34,7 @@
                 </h3>
                 <p id="expenseDisplay"></p>
             </div>
-            <div class="card total" onLoad="Total.balance()">
+            <div class="card total">
                 <h3>
                     <span>Total </span>
                     <img src="./assets/total.svg" alt="Imagem de Total">
@@ -66,10 +66,10 @@
                     <div class="input-group">
                         <fieldset>
                             <legend class="legend"></legend>
-                            <label class="sr-only"> for="description">Descrição*</label>
-                            <input type="text" id="description" name="description" placeholder="Descreva a transação" />
+                            <label class="sr-only"> for="description">Descrição</label>
+                            <input type="text" id="description" name="description" placeholder="Lançamento" />
                             <label class="sr-only" for="amount">Valor</label>
-                            <input type="number" step=".01" id="amount" name="amount" placeholder="Insira o valor" />
+                            <input type="number" step=".01" id="amount" name="amount" placeholder="0,00" />
                             <small class="help">Use negativo ( - ) para despesas e vírgula ( , ) para casas
                                 decimais</small>
                             <label class="sr-only"> for="data">Data</label>
@@ -80,7 +80,6 @@
                         <a onclick="Modal.close()" class="button cancel">Cancelar</a>
                         <button type="submit"> Salvar</button>
                     </div>
-                    <!-- <spam class="form-error"></spam> -->
                 </form>
             </div>
         </div>

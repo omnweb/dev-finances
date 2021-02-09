@@ -70,8 +70,16 @@ const Transaction = {
     },
 
     total() {
-        return Transaction.incomes() + Transaction.expenses()
-    }
+        // entradas - saídas
+        let total = 0;
+        Transaction.all.forEach(transaction => {
+            if (transaction.amount > 0)
+                total += transaction.amount
+            else
+                total += transaction.amount
+        })
+        return total;
+    },
 }
 const DOM = {
     transactionContainer: document.querySelector('#data-table tbody'),
@@ -108,6 +116,15 @@ const DOM = {
         document
             .querySelector("#totalDisplay")
             .innerHTML = Utils.formatCurrency(Transaction.total())
+
+        if (Transaction.total(transaction) === 0) {
+            document.querySelector('.total').style.backgroundColor = '#ccc';
+        } else if (Transaction.total(transaction) < 0) {
+            document.querySelector('.total').style.background = 'rgb(233, 41, 41)';
+        } else {
+            document.querySelector('.total').style.background = 'rgb(73, 170, 38)';
+        }
+
     },
     clearTransaction() {
         DOM.transactionContainer.innerHTML = ""
@@ -116,8 +133,8 @@ const DOM = {
 
 const Utils = {
     formatAmount(value) {
-        value = Number(value) * 100
-        return value
+        value = value * 100
+        return Math.round(value)
     },
     formatDate(date) {
         const splitDate = date.split("-")

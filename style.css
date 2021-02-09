@@ -164,8 +164,16 @@ p {
     margin-top: 1rem;
 }
 
-.card.total {
-    background-color: var(--green);
+.card.total{
+    background-color: #ccc;
+    color: var(--white);
+}
+.positive{
+    background-color:var(--green);
+    color: var(--white);
+}
+.negative{
+    background-color: var(--red);
     color: var(--white);
 }
 
@@ -262,6 +270,7 @@ td.expense {
     width: 90%;
     max-width: 500px;
     z-index: 1;
+    border-radius: var(--br-default);
 }
 
 /* Form -  */
@@ -278,7 +287,7 @@ fieldset {
     display: flex;
     padding: 1rem;
     color: var(--dark-blue);  
-    border: 1px solid rgba(0,0,0, 0.2)  
+    border: 1px solid rgba(0,0,0, 0.2)
 }
 
 fieldset >input {
