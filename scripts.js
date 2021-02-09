@@ -10,25 +10,6 @@ const Modal = {
     }
 }
 
-// const transaction = [
-//     {
-//         description: 'Luz',
-//         amount: -50000,
-//         date: '05/02/2021'
-//     },
-//     {
-//         description: 'Criação Websiter',
-//         amount: 500000,
-//         date: '05/02/2021'
-//     },
-//     {
-//         description: 'Internet',
-//         amount: -25000,
-//         date: '05/02/2021'
-//     }
-
-// ]
-
 const Storage = {
     get() {
         return JSON.parse(localStorage.getItem('dev.finances.transaction')) || []
@@ -37,7 +18,6 @@ const Storage = {
         localStorage.setItem("dev.finances.transaction", JSON.stringify(transaction))
     }
 }
-
 
 const Transaction = {
     all: Storage.get(),
@@ -81,6 +61,7 @@ const Transaction = {
         return total;
     },
 }
+
 const DOM = {
     transactionContainer: document.querySelector('#data-table tbody'),
 
@@ -103,7 +84,7 @@ const DOM = {
                     <img class="icon" onClick="Transaction.remove(${index})" src="./assets//minus.svg" alt="Remover Transação">
                 </td>
             </tr>
-        `
+            `
         return html
     },
     updateBalance() {
