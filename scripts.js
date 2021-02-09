@@ -38,7 +38,7 @@ const Transaction = {
     },
     remove(index) {
         Transaction.all.splice(index, 1)
-        App.reload()
+        setTimeout(() => App.reload(), 200)
     },
     incomes() {
         let income = 0
@@ -82,7 +82,7 @@ const DOM = {
                 <td class="${CssClass}">${amount}</td>
                 <td class="date">${transaction.date}</td>
                 <td>
-                    <img onClick="Transaction.remove(${index})" src="./assets//minus.svg" alt="Remover Transação">
+                    <img class="icon" onClick="Transaction.remove(${index})" src="./assets//minus.svg" alt="Remover Transação">
                 </td>
             </tr>
         `
@@ -170,6 +170,15 @@ const Form = {
             err.innerHTML = `<span class="form-error">${error.message}</span>`
         }
 
+    }
+}
+
+const Storage = {
+    get() {
+        return JSON.parse(localStorage.getItem('dev.finances.transaction')) || []
+    },
+    set(transaction) {
+        localStorage.setItem("dev.finances.transaction", JSON.stringify(transaction))
     }
 }
 

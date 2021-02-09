@@ -302,6 +302,15 @@ fieldset > small {
     width: 48%;
 }
 
+.icon {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
 
 
 /* Footer - ########  */
